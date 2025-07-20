@@ -1,0 +1,96 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": ["airbnb", "airbnb/hooks", "prettier"],
+  "plugins": ["prettier", "testing-library"],
+  "env": {
+    "browser": true
+  },
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  },
+  "rules": {
+    "no-unused-vars": "off",
+    "import/no-cycle": "off",
+    "arrow-body-style": "off",
+    "react/prop-types": "off",
+    "no-param-reassign": "off",
+    "no-underscore-dangle": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/require-default-props": "off",
+    "import/prefer-default-export": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/destructuring-assignment": "off",
+    "react/function-component-definition": "off",
+    "react/default-props-match-prop-types": "off",
+    "@typescript-eslint/default-param-last": ["off"],
+    "react/no-array-index-key": "warn",
+    "react-hooks/exhaustive-deps": "warn",
+    "testing-library/prefer-screen-queries": "warn",
+    "react/jsx-key": "error",
+    "react/jsx-fragments": ["error", "element"],
+    "react/state-in-constructor": ["error", "never"],
+    "import/no-unresolved": ["error", { "ignore": ["^test-utils$"] }],
+    "react/static-property-placement": ["error", "static public field"],
+    "import/extensions": [
+      "error",
+      { "ignorePatterns": { "ts": "never", "tsx": "never" } }
+    ],
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".js", ".ts", ".tsx"] }
+    ],
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "labelComponents": ["FormLabel"],
+        "labelAttributes": ["label"],
+        "controlComponents": ["TextInput"],
+        "assert": "either"
+      }
+    ],
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "jsxSingleQuote": true,
+        "trailingComma": "all",
+        "arrowParens": "avoid",
+        "endOfLine": "lf"
+      }
+    ],
+    "react/jsx-sort-props": [
+      "error",
+      {
+        "callbacksLast": true,
+        "shorthandFirst": true,
+        "ignoreCase": true,
+        "noSortAlphabetically": false,
+        "reservedFirst": true
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal"],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  }
+}

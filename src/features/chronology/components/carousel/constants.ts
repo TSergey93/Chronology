@@ -1,0 +1,2 @@
+export const CIRCLE_DEGREES = 360;
+export const HALF_CIRCLE_DEGREES = CIRCLE_DEGREES / 2;
